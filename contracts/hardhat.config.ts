@@ -18,7 +18,7 @@ const etherscanApis: any = JSON.parse(process.env.ETHERSCAN_APIS !== undefined ?
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: "0.8.17",
+    version: "0.8.20",
     settings: {
       optimizer: {
         enabled: true,
@@ -49,7 +49,7 @@ const config: HardhatUserConfig = {
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       live: true,
       saveDeployments: true,
-      tags: ["staging"],      
+      tags: ["staging"],
       verify: {
         etherscan: {
           apiKey: etherscanApis["5"]
@@ -62,7 +62,7 @@ const config: HardhatUserConfig = {
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       live: true,
       saveDeployments: true,
-      tags: ["staging"],      
+      tags: ["staging"],
       verify: {
         etherscan: {
           apiKey: etherscanApis["80001"],
@@ -77,7 +77,7 @@ const config: HardhatUserConfig = {
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       live: true,
       saveDeployments: true,
-      tags: ["production"],      
+      tags: ["production"],
       verify: {
         etherscan: {
           apiKey: etherscanApis["137"],
@@ -91,7 +91,7 @@ const config: HardhatUserConfig = {
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       live: true,
       saveDeployments: true,
-      tags: ["production"],      
+      tags: ["production"],
       verify: {
         etherscan: {
           apiKey: etherscanApis["100"],
